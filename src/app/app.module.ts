@@ -3,9 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { MaterialModule } from './material.module';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
+import { RoutingModule } from './routing.module';
+import {RouterModule} from "@angular/router";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {AngularFireModule} from "angularfire2";
+import {environment} from "../environments/environment";
 
 
 @NgModule({
@@ -13,10 +17,13 @@ import { SharedModule } from './shared/shared.module';
     AppComponent
   ],
   imports: [
+    RouterModule,
     BrowserModule,
-    MaterialModule,
+    BrowserAnimationsModule,
+    AngularFireModule.initializeApp(environment.firebase),
     CoreModule,
-    SharedModule
+    SharedModule,
+    RoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

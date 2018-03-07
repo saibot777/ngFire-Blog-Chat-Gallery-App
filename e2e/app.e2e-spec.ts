@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('ng-fire-blog-chat-app App', () => {
+describe('fire-blog App', () => {
   let page: AppPage;
 
   beforeEach(() => {
